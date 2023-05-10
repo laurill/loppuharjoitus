@@ -8,7 +8,8 @@ $data = json_decode($body);
 
 $invoice_id = strip_tags($data->invoiceid);
 
-$sql = "DELETE FROM invoice_items WHERE InvoiceId = ?";
+$sql = "DELETE FROM invoice_items 
+        WHERE InvoiceId = ?";
 
 $statement = $dbcon->prepare($sql);
 $statement->execute(array($invoice_id));

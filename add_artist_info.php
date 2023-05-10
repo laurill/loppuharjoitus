@@ -1,7 +1,6 @@
 <?php
 
 require "dbconnection.php";
-
 $dbcon = createDbConnection();
 
 $body = file_get_contents('php://input');
